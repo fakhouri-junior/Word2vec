@@ -24,6 +24,8 @@ def adjust_file(filename_path, output_file_name):
             line = line.split('\n')
             for sub_line in line:
                 sub_line = sub_line.strip()
+                # get rid of double spaces between words if occur
+                sub_line = sub_line.replace('  ', ' ')
                 # ignore empty lines
                 if sub_line == "":
                     continue
