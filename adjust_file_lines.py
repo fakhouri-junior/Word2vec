@@ -1,7 +1,11 @@
 import os.path
 import ntpath
+import argparse
 
-def adjust_file(filename_path):
+INPUT_FILE = "corpus.txt" #default
+OUTPUT_FILE = "preprocessed.txt" # default
+
+def adjust_file(filename_path, output_file_name):
     """
     write each sentence in one line
 
@@ -16,7 +20,6 @@ def adjust_file(filename_path):
         for line in my_file:
             # replace every dot with new line
             line = line.replace('.', ' \n')
-            # print(line)
             # split on \n
             line = line.split('\n')
             for sub_line in line:
@@ -25,9 +28,8 @@ def adjust_file(filename_path):
                 if sub_line == "":
                     continue
                 lines.append(sub_line)
-        # print(lines)
         # write a new file
-        new_file = open(ntpath.basename(filename_path)+"_preprocessed.txt", "w")
+        new_file = open(output_file_name, "w")
         for l in lines:
             new_file.write(l + '\n')
 
@@ -36,4 +38,12 @@ def adjust_file(filename_path):
         raise ValueError("filename does not exist")
 
 
-adjust_file("corpus.txt")
+# adjust_file("corpus.txt")
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-i', default="corpus.txt", dest="input_file", type=str, help="Path to input file")
+    parser.add_argument('-o', default="preprocessed.txt", dest="output_file", type=str, help="name of output file")
+    args = parser.parse_args()
+    adjust_file(args.input_file, args.output_file)
+
