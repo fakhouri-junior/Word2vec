@@ -6,17 +6,22 @@ from sklearn.manifold import TSNE
 from sklearn import preprocessing
 import matplotlib.pyplot as plt
 
-# default values, can be changed by running program from command line
+from learn_word2vec.Skip_gram_model.add_dictionaries_to_index_words import get_number_training_examples
+
 TOKENIZED_INPUT_FILE = "tokenized_file.txt"
 TRAIN_DATA_FILE = "word_pairs.txt"
 EPOCHS = 100
-NUMBER_OF_TRAINING_EXAMPLES = 68  # according to my word_pairs.txt toy example
 word2int, int2word = add_dictionaries_to_index_words.make_word2int_and_int2word(TOKENIZED_INPUT_FILE)
+
+# according to my word_pairs.txt toy example
+NUMBER_OF_TRAINING_EXAMPLES = get_number_training_examples(TRAIN_DATA_FILE)
+
 
 VOCAB_LENGTH = len(word2int.keys())
 HIDDEN_DIM = 25  # play with this as you wish, i choose 25 because corpus is very tiny
 
 START_LEARNING_RATE = 0.0001
+
 
 """
 Create a generator that can read a file and pass x,y values,
@@ -126,6 +131,7 @@ with tf.Session() as sess:
     # initialize all variables
     sess.run(var_init)
 
+    saver.restore(sess,"C:\\Users\\salimms\\PycharmProjects\\tutTESNORFLOW\\learn_word2vec\\Skip_gram_model\\checkpoints\\-17917")
     for i in range(EPOCHS):
         # run iterator initializer op with train dataset every epoch
         sess.run(iterator_init_op_train)

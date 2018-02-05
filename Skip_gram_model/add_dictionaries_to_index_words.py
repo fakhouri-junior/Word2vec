@@ -1,6 +1,13 @@
 import os.path
 from collections import Counter
 
+def get_number_training_examples(file_name="word_pairs.txt"):
+    my_file = open(file_name, 'r')
+    lines = my_file.readlines()
+    print (len(lines))
+    return lines
+
+
 #from string
 def create_lookup_tables(words):
     """
