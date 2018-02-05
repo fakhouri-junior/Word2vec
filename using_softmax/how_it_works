@@ -1,9 +1,6 @@
-first we run adjust_file_lines which include preprocessing the text (this might include tokenization and subsampling
-this python file will generate preprocess.txt or whatever name output is passed
+run preprocess_text_file.py with input file path, and output file path
+the output file path will contain the training data (Word_pairs)
 
-then preprocess.txt, will run on add_dict.....py, and generate_File_Training....py to get training data file (word_pairs.txt)
-and in memory mapping dictionaries from index to word and vice versa to be used by the input pipeline mechanism
-to generate one hot vectors for each word
 
 input-pipeline is as follows:
 first we build a generator function that reads a file (word_pairs) and generate x,y one hot vectors
