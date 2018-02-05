@@ -10,9 +10,9 @@ Then come back here and go through the files and you will be able to follow alon
 ## Usage
 
 Run preprocess_text_file.py with input file path, and output file name you would like to get for output data
-'''
+```
 python preprocess_text_file.py -i input_file.txt -o name_of_output_file.txt
-'''
+```
 
 or if you would like to use the default files and run the model on a really tiny corpus just to experiment with code rather than get results
 then just run the file
