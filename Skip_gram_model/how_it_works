@@ -1,0 +1,9 @@
+run preprocess_text_file.py with input file path, and output file path
+the output file path will contain the training data (Word_pairs) and another file will be created
+called tokenized_file.txt, this will be used by the model to establish a dictionary mapping
+from each word to an integer.
+
+run train_model_using_dataset_input_pipeline.py
+and the network will start running
+
+

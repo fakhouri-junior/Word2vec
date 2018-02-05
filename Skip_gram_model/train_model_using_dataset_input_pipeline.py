@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-from learn_word2vec.using_softmax import add_dictionaries_to_index_words
+from learn_word2vec.Skip_gram_model import add_dictionaries_to_index_words
 import os.path
 from sklearn.manifold import TSNE
 from sklearn import preprocessing
@@ -126,8 +126,6 @@ with tf.Session() as sess:
     # initialize all variables
     sess.run(var_init)
 
-    # restore variables
-    #saver.restore(sess,"C:\\Users\\salimms\\PycharmProjects\\tutTESNORFLOW\\learn_word2vec\\using_softmax\\checkpoints\\-9177")
     for i in range(EPOCHS):
         # run iterator initializer op with train dataset every epoch
         sess.run(iterator_init_op_train)

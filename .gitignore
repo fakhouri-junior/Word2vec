@@ -2,3 +2,7 @@
 using_softmax/checkpoints/
 
 using_softmax/events_board/
+
+Skip_gram_model/checkpoints/
+
+Skip_gram_model/events_board/
