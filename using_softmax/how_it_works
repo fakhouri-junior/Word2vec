@@ -1,0 +1,14 @@
+first we run adjust_file_lines which include preprocessing the text (this might include tokenization and subsampling
+this python file will generate preprocess.txt or whatever name output is passed
+
+then preprocess.txt, will run on add_dict.....py, and generate_File_Training....py to get training data file (word_pairs.txt)
+and in memory mapping dictionaries from index to word and vice versa to be used by the input pipeline mechanism
+to generate one hot vectors for each word
+
+input-pipeline is as follows:
+first we build a generator function that reads a file (word_pairs) and generate x,y one hot vectors
+for the whole file
+then we use tf.data.Dataset.from_generator() passing that generator object, to be consumed
+then we create the iterator that consumes the dataset using the from_structure method, to have more
+flexibility with changing datasets (train,val,test) and still having one generator
+this all well explaing in build_input_pipeline.py code

@@ -2,7 +2,7 @@ import os.path
 
 def make_word2int_and_int2word(preprocessed_corpus_file):
     # make sure file exists
-    if os.path.isfile(corpus_file):
+    if os.path.isfile(preprocessed_corpus_file):
         # find all unique words
         all_words = []
         word2int = {}
@@ -23,7 +23,7 @@ def make_word2int_and_int2word(preprocessed_corpus_file):
     else:
         raise ValueError("File does not exist")
 
-
-word2int, int2word = make_word2int_and_int2word(preprocessed_corpus_file='preprocessed.txt')
-print(word2int)
-print(int2word)
+#
+# word2int, int2word = make_word2int_and_int2word(preprocessed_corpus_file='preprocessed.txt')
+# print(word2int)
+# print(int2word)
