@@ -12,7 +12,7 @@ Run preprocess_text_file.py with input file path, and output file name you would
 
 python preprocess_text_file.py -i input_file.txt -o name_of_output_file.txt
 
-or if you would like to use the default and the model on a really tiny corpus just to experiment with code rather than get results
+or if you would like to use the default files and run the model on a really tiny corpus just to experiment with code rather than get results
 then just run the file
 
 python preprocess_text_file.py
