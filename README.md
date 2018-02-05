@@ -17,12 +17,19 @@ python preprocess_text_file.py -i input_file.txt -o name_of_output_file.txt
 or if you would like to use the default files and run the model on a really tiny corpus just to experiment with code rather than get results
 then just run the file
 
+```
 python preprocess_text_file.py
+```
 
 the output file path will contain the training data (Word_pairs or whatever name specified for output_file) and another file will be created
 called tokenized_file.txt, this will be used by the model to establish a dictionary mapping
 from each word to an integer.
 
 
-Finally run train_model_using_dataset_input_pipeline.py to start training
+Finally run to start training
+
+```
+train_model_using_dataset_input_pipeline.py 
+```
+
 
