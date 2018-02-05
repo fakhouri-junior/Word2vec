@@ -26,7 +26,7 @@ called tokenized_file.txt, this will be used by the model to establish a diction
 from each word to an integer.
 
 
-Finally run to start training
+Finally run this line to start training
 
 ```
 train_model_using_dataset_input_pipeline.py 
