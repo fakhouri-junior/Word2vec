@@ -4,8 +4,8 @@ from collections import Counter
 def get_number_training_examples(file_name="word_pairs.txt"):
     my_file = open(file_name, 'r')
     lines = my_file.readlines()
-    print (len(lines))
-    return lines
+    print(len(lines))
+    return len(lines)
 
 
 #from string
