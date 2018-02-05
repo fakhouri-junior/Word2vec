@@ -29,7 +29,7 @@ from each word to an integer.
 Finally run this line to start training
 
 ```
-train_model_using_dataset_input_pipeline.py 
+python train_model_using_dataset_input_pipeline.py 
 ```
 
 
